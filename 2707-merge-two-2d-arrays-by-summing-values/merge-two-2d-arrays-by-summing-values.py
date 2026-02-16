@@ -1,11 +1,11 @@
 class Solution:
     def mergeArrays(self, nums1: List[List[int]], nums2: List[List[int]]) -> List[List[int]]:
-        i , j = 0,0
+        i, j = 0,0
         result = []
 
-        while i < len(nums1) and j<len(nums2):
-            id1,val1 = nums1[i]
-            id2, val2 = nums2[j]
+        while i <len(nums1) and j < len(nums2):
+            id1, val1 = nums1[i]
+            id2 ,val2 = nums2[j]
 
             if id1 == id2:
                 result.append([id1,val1+val2])
@@ -13,7 +13,6 @@ class Solution:
                 j+=1
             
             elif id1<id2:
-                # Smaller ID from nums1
                 result.append([id1,val1])
                 i+=1
             
@@ -21,7 +20,7 @@ class Solution:
                 result.append([id2,val2])
                 j+=1
         
-        while i<len(nums1):
+        while i < len(nums1):
             result.append(nums1[i])
             i+=1
         
