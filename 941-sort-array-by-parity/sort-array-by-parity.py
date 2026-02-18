@@ -4,7 +4,7 @@ class Solution:
         n = len(nums)
         for fast in range(n):
             if nums[fast]%2 == 0:
-                nums[slow], nums[fast] = nums[fast],nums[slow]
+                nums[slow],nums[fast] = nums[fast],nums[slow]
                 slow +=1
         
         return nums
