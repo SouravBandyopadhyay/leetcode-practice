@@ -1,9 +1,9 @@
 class Solution:
     def isPalindrome(self, s: str) -> bool:
-        left, right = 0 , len(s)- 1
+        left, right = 0 , len(s)-1
 
-        def is_alphanumeric(str):
-            return str.isalnum()
+        def is_alphanumeric(s):
+            return s.isalnum()
         
         while left<right:
             while left<right and not is_alphanumeric(s[left]):
