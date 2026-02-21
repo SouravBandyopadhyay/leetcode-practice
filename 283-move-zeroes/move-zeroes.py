@@ -3,8 +3,15 @@ class Solution:
         """
         Do not return anything, modify nums in-place instead.
         """
-        left = 0 
-        for right in range(len(nums)):
-            if nums[right]:
-                nums[left],nums[right] = nums[right],nums[left]
-                left +=1
+        temp = []
+        for num in nums:
+            if num !=0:
+                temp.append(num)
+        
+        for i in range(len(nums)):
+            if i <len(temp):
+                nums[i] = temp[i]
+            
+            else:
+                nums[i] = 0
+        
