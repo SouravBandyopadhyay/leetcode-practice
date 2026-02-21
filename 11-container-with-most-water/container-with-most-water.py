@@ -5,9 +5,10 @@ class Solution:
         while left<right:
             area = min(height[left],height[right])*(right-left)
             res = max(res,area)
-
-            if height[left] <= height[right]:
+        
+            if height[left]<=height[right]:
                 left +=1
+            
             else:
                 right -=1
         
