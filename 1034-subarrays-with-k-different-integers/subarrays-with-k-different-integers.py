@@ -4,7 +4,7 @@ class Solution:
             count = defaultdict(int)
             res = l = 0
             for r in range(len(nums)):
-                count[nums[r]]+=1
+                count[nums[r]] +=1
                 if count[nums[r]] == 1:
                     k-=1
                 
