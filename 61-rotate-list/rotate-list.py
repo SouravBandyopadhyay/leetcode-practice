@@ -8,18 +8,18 @@ class Solution:
         if not head:
             return head
         
-        curr, n = head, 1
+        curr , n = head , 1
         while curr.next:
             n+=1 
             curr = curr.next
         
         curr.next = head
-        k %= n
-        
+        k%=n
+
         for i in range(n-k):
-            curr = curr.next
+            curr=curr.next
         
         head = curr.next
         curr.next = None
-
+    
         return head
