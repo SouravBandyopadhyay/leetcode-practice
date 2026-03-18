@@ -4,9 +4,9 @@ class Solution:
         res = float('inf')
 
         for right in range(len(nums)):
-            total += nums[right]
+            total +=nums[right]
             while total>= target:
-                res = min(right - left + 1, res)
+                res = min(res,right - left + 1)
                 total -= nums[left]
                 left +=1
             
