@@ -6,7 +6,7 @@ class Solution(object):
         """
         stack = []
         for i in range(len(s)):
-            if s[i] == '(' or s[i] == '[' or s[i] == '{':
+            if s[i] == "(" or s[i] == '{' or s[i] == "[":
                 stack.append(s[i])
             
             elif s[i] == ')' and stack and stack[len(stack)-1] == '(':
@@ -15,10 +15,10 @@ class Solution(object):
             elif s[i] == ']' and stack and stack[len(stack)-1] == '[':
                 stack.pop()
             
-            elif s[i] == '}' and stack and stack[len(stack)-1] == "{":
+            elif s[i] == '}' and stack and stack[len(stack)-1] == '{':
                 stack.pop()
             
             else:
                 stack.append(s[i])
         
-        return len(stack)==0
+        return len(stack) == 0
