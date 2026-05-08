@@ -1,6 +1,6 @@
 class Solution:
     def simplifyPath(self, path: str) -> str:
-        component = path.split("/")
+        component = path.split('/')
         stack = []
 
         for comp in component:
@@ -11,7 +11,6 @@ class Solution:
                 if stack:
                     stack.pop()
             
-
             else:
                 stack.append(comp)
         
